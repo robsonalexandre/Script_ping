@@ -4,112 +4,93 @@
 # Update in: 22/02/2021
 
 # Menu de agências
+cidades=(
+  "Água Branca|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Oeiras|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Altos|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Palmeirais|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Amarante|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Parnaíba|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Anísio de Abreu|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Paulistana|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Barras|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Pedro|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Batalha|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Picos|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Bom Jesus|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Pio IX|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Buriti dos Lopes|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Piracuruca|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Campo Maior|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Piripiri|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Canto do Buriti|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Regeneração|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Castelo do Piauí|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "São João do Piauí|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Cocal|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "São Miguel do Tapuio|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Corrente|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "São Pedro do Piauí|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Elesbão Veloso|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "São Raimundo Nonato|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Esperantina|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Simões|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Floriano|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Simplício Mendes|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Gilbués|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Teresina - Centro|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Inhuma|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Teresina - Parque Piauí|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Jaicós|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Teresina - Dirceu|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "José de Freitas|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Teresina - Espaço Cidadania|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Luis Correia|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "União|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Luzilândia|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Uruçui|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Miguel Alves|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+  "Valença do Piauí|Agência (8.8.8.8)|Escritório (8.8.4.4)|Subestação (google.com)"
+)
 
-menu() {
-
-	clear
-	echo 
-	echo -n "
-
-                                                        	     +--------------------------------+
-+---------------+                                                    |         SCRIPT PING            |
-|MUNICÍPIOS     |  			                             |			 	      |
-+---------------+----------------------------------------------------+--------------------------------+----------------------------------------------------------------+
-1  - Água Branca                  |24 - Oeiras			     |								
-2  - Altos                        |25 - Palmeirais		     |								
-3  - Amarante                     |26 - Parnaíba                     |
-4  - Anísio de Abreu              |27 - Paulistana                   |
-5  - Barras                       |28 - Pedro 2                      |
-6  - Batalha                      |29 - Picos                        |
-7  - Bom Jesus                    |30 - Pio IX                       |
-8  - Buriti dos Lopes             |31 - Piracuruca                   |
-9  - Campo Maior                  |32 - Piripiri                     |
-10 - Canto do Buriti              |33 - Regeneração                  |
-11 - Castelo do Piauí             |34 - São João do Piauí            |
-12 - Cocal                        |35 - São Miguel do Tapuio         |
-13 - Corrente                     |36 - São Pedro do Piauí           |
-14 - Elesbão Veloso               |37 - São Raimundo Nonato          |
-15 - Esperantina                  |38 - Simões                       |
-16 - Floriano                     |39 - Simplício Mendes             |
-17 - Gilbués                      |40 - Teresina - Centro            |
-17 - Inhuma                       |41 - Teresina - Parque Piauí      |
-19 - Jaicós                       |42 - Teresina - Dirceu            |
-20 - José de Freitas              |43 - Teresina - Espaço Cidadania  |
-21 - Luis Correia                 |44 - União                        |
-22 - Luzilândia                   |45 - Uruçui                       |
-23 - Miguel Alves                 |46 - Valença do Piauí             |
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-==> "
-	read opcao
-
-	case $opcao in
-	
-    1) source ./municipios/agua_branca.sh
-       agua_branca
-       menu
-       ;;
-    2) source ./municipios/altos.sh
-       altos
-       menu
-       ;;
-    3) source ./municipios/amarante.sh
-       amarante
-       menu
-       ;;
-    4) source ./municipios/anisiodeabreu.sh
-       anisiodeabreu
-       menu
-       ;;
-    5) source ./municipios/barras.sh
-       barras
-       menu
-       ;;
-    6) source ./municipios/batalha.sh
-       batalha
-       menu
-       ;;
-    7) source ./municipios/bomjesus.sh
-       bomjesus
-       menu
-       ;;
-    8) source ./municipios/buritidoslopes.sh
-       buritidoslopes
-       menu
-       ;;
-    9) source ./municipios/campomaior.sh
-       campomaior
-       menu
-       ;;
-    10) source ./municipios/cantodoburiti.sh
-        cantodoburiti
-        menu
-        ;;	
- 	11) source ./municipios/campomaior.sh
-        campomaior
-        menu
-        ;;
-
-
-
-
-   *) echo "Opção Inválida"
-      menu
-      ;;
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	esac
-	
-
+function hr() {
+  printf -v pad '%*s' $COLUMNS
+  pad=$(: "${pad// /-}"; : "${_/#-/+}"; echo "${_/%-/+}")
+  echo "$pad"
 }
-menu
 
+function menu() {
+  # Selecionando opção de cidade variável opt
+  hr
+  column < <(
+  for ((i=0;i<${#cidades[@]};i++)); do
+    printf '%2s - %s\n' "$i" "${cidades[i]%%|*}"
+  done
+  printf '%2s - %s\n' "q" "Sair"
+  )
+  hr
+  read -p "==> " i
+  [[ $i == 'q' ]] && return 1
+  IFS='|' read -a opt <<< "${cidades[i]}"
 
+  # Selecionando subopção de 3 em variável i
+  hr
+  for((i=1;i<${#opt[@]};i++)); do
+    printf '%2s - %s\n' "$i" "${opt[i]}"
+  done
+  printf '%2s - %s\n' "m" "Menu"
+  hr
+  read -p "==> " i
+  [[ $i == 'm' ]] && return 0
+
+  # Executando comando ping -c3 IP
+  printf 'Pinging %s...\n' "${opt[i]}"
+  ip="${opt[i]#*\(}"
+  if [[ ${ip%)} ]]; then
+    ping -c3 "${ip%)}"
+  fi
+}
+
+while [[ $? == 0 ]]; do
+  menu
+done
